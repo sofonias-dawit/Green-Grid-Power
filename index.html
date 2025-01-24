@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple webpage layout example.">
+    <meta name="author" content="Your Name">
+    <title>Green Grid Power</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            list-style-type: none;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: rgb(19, 125, 19);
+            color: #fff;
+            padding: 5px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        #logo1 {
+            width: 40px;
+        }
+        #logo2 {
+            width: 120px;
+            padding-bottom: 8px;
+        }
+        nav {
+            display: flex;
+        }
+        .menu {
+            display: flex;
+            margin-left: 20px;
+            transition: all 0.3s ease;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            margin-right: 20px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        .hamburger div {
+            background-color: white;
+            height: 3px;
+            width: 25px;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: rgb(19, 125, 19);
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                padding: 10px;
+                border-radius: 8px;
+                z-index: 1000;
+            }
+
+            .menu a {
+                color: white;
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+        .cover {
+            width: 100%;
+            height: 60vh;
+            object-fit: fill;
+        }
+        main {
+            padding: 20px;
+        }
+        .services {
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            max-width: 900px;
+        }
+        .services h2, .contact h2 {
+            font-size: 2em;
+            color: rgb(19, 125, 19);
+            margin-bottom: 10px;
+        }
+        .services p, .contact p {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .service_images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .service_images img {
+            width: 220px;
+            height: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service_images img:hover {
+            transform: scale(1.1);
+        }
+        .container {
+            background-color: #333;
+            padding: 20px;
+        }
+        .contact {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background-color:#555 ;
+        }
+        #contact-head{
+            color: white;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #aeaeae;
+        }
+        input, textarea, button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #404040;
+            color: rgb(255, 255, 255);
+        }
+        button {
+            background: rgb(0, 0, 0);
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: darkgreen;
+        }
+        #webicons i {
+            padding: 5px;
+            font-size: 22px;
+             margin-top: 10px;
+        }
+        #yt{
+        color: red;
+        }
+        #tg {
+            color: rgb(55, 156, 224);
+        }
+        #fb{
+            color: rgb(35, 111, 204);
+        }
+        #insta{
+            color: rgb(200, 70, 31);
+        }
+        footer {
+            background: rgb(19, 125, 19);
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            font-size: 0.9em;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Untitled-2 [Recovered].png" alt="logo" id="logo1"><img src="images/Untitled-2 [Recovered]sfgads.png" alt="logo" id="logo2">
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="menu" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="#services">Service</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section>
+        <img src="images/cover2.jpg" alt="Cover Image" class="cover">
+    </section>
+    <main id="services">
+        <div class="services">
+            <h2>Services</h2>
+            <div class="service_images">
+                <img src="images/20250109_120357.png" alt="Service 1">
+                <img src="images/20250109_120438.png" alt="Service 2">
+                <img src="images/20250109_120528.png" alt="Service 3">
+                <img src="images/20250109_120703.png" alt="service4">
+            </div>
+            <div class="services-list">
+                <div class="service-item">
+                        <h4>Smart Grid Technology Integration</h4>
+                        <h4>Renewable Energy Supply</h4>
+                        <h4>Energy Storage Solutions</h4>
+                        <h4>Energy Monitoring Systems</h4>
+                        <h4>Consulting for Energy Optimization</>
+                </div>
+            </div>
+        </div>
+
+        <div class="services" id="about">
+            <h2>About Us</h2>
+            <h3>Our Mission</h3>
+            <p>
+                At GreenGrid Power, we are dedicated to transforming the landscape of electricity generation and distribution through sustainable practices and innovative technologies. As pioneers in the renewable energy sector, we focus on revolutionizing how energy is produced and delivered, ensuring that our solutions are both eco-friendly and reliable.
+            </p><p>
+                Our approach combines renewable energy sources such as solar and wind with advanced energy storage systems, creating a smart grid network that meets the demands of modern homes and businesses. This integration not only enhances the reliability of power supply but also contributes significantly to reducing carbon footprints and combating the global energy crisis.
+            </p>
+            <h3> Why you choose us</h3>
+            <p>
+            We integrate cutting-edge smart grid technology with renewable energy sources, ensuring a seamless and effident energy supply.
+            
+            Our commitment to sustainability drives usto utilize solar and wind energy, significantly roducing carbon footprints and contributing to a cleaner environment.
+
+            With our advanced energy storage systema, we provide consistent and dependable power to both homes and businesses, even during peak demand times.
+            </p><p>
+            Our solutions not only support environmental goals but also create economic opportunities, making energy more accessible and affordable for everyone.
+
+            Our consulting services help you maximize energy efficiency, reducing costs while enhanang performance.
+            </p>
+        </div>
+    </main>
+    <div class="container">
+        <div class="contact" id="contact">
+            <h2><center id="contact-head">Contact Us</center></h2><br>
+            <form onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" placeholder="Your message here" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="webicons"><center>
+                <a href="#"><i class="fab fa-youtube" id="yt"></i></a>
+                <a href="#"><i class="fab fa-telegram" id="tg"></i></a>
+                <a href="#"><i class="fab fa-facebook-f" id="fb"></i></a>
+                <a href="#"><i class="fab fa-instagram" id="insta"></i></a></center>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Green Grid Power.  All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            if (!name || !email || !message) {
+                alert("Please fill out all fields.");
+                return false;
+            }
+            alert("Thank you for your message!");
+            return true; 
+        }
+    </script>
+</body>
+</html>
