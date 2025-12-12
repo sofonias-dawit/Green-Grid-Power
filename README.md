@@ -25,4 +25,4 @@ JavaScript (Vanilla) — For small interactive elements
 
 🚀 Project Purpose
 
-This project showcases my front-end web development skills and design sense for creating professional, environment-focused websites. It was built to demonstrate how clean UI and smooth UX can enhance a company’s online presence.
+This project was assigned by our teacher to demonstrate practical skills in front-end web development, including HTML, CSS, and JavaScript, as part of the course requirements
