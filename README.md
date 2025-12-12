@@ -21,7 +21,7 @@ HTML5 — For structure and content
 
 CSS3 — For styling and responsiveness
 
-JavaScript (Vanilla) — For small interactive elements
+JavaScript — For small interactive elements
 
 🚀 Project Purpose
 
